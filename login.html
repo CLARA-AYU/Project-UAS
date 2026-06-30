@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SECOND BLOOMÉ</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Times New Roman", serif;
+}
+
+body{
+    background:#f9ebe7;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:350px;
+    text-align:center;
+}
+
+.logo{
+    font-size:48px;
+    font-weight:700;
+    letter-spacing:4px;
+    color:#b87b7b;
+    margin-bottom:10px;
+}
+
+.tagline{
+    font-family:Arial, sans-serif;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#666;
+    text-transform:uppercase;
+    margin-bottom:40px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    border-bottom:1px solid #000;
+    outline:none;
+    font-size:14px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#b87b7b;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.footer{
+    margin-top:20px;
+    font-size:12px;
+    color:#777;
+    font-family:Arial, sans-serif;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        SECOND<br>BLOOMÉ
+    </div>
+
+    <div class="tagline">
+        PRELOVED FASHION • BAGS • SHOES
+    </div>
+
+    <form action="homepage.html" method="POST">
+    <input type="text"
+           name="email"
+           placeholder="Email"
+           pattern=".*@.*"
+           title="Please input email."
+           required>
+
+    <input type="password"
+           name="password"
+           placeholder="Password"
+           minlength="4"
+           maxlength="6"
+           title="Password harus mengandung 4-6 karakter."
+           required>
+
+    <button type="submit">Login</button>
+    </form>
+
+
+    <div class="footer">
+        Where Preloved Blooms Again
+    </div>
+
+</div>
+
+</body>
+</html>

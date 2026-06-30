@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="login.html"></a>
+<a href="homepage.html"></a>
+
+<title>SECOND BLOOMÉ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', 'Times New Roman', Times, serif;
+    background-image:url(https://i.pinimg.com/736x/cb/a2/2d/cba22d2f0d959bfc778bd9c95c0ae0b0.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    height:100vh;
+}
+
+.overlay{
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.25);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:35px 80px;
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    font-size:32px;
+    letter-spacing:5px;
+    color:white;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    margin-left:30px;
+    font-size:14px;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    opacity:0.7;
+}
+
+/* Hero Section */
+.hero{
+    height:80vh;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
+}
+
+.content{
+    color:white;
+    max-width:600px;
+}
+
+.content h1{
+    font-family:'Playfair Display', serif;
+    font-size:90px;
+    line-height:90px;
+    font-weight:400;
+}
+
+.content p{
+    margin-top:25px;
+    font-size:18px;
+    line-height:30px;
+    max-width:500px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 35px;
+    border:1px solid white;
+    text-decoration:none;
+    color:white;
+    letter-spacing:2px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#b87b7b;
+}
+
+/* Login Button */
+.login{
+    position:fixed;
+    bottom:35px;
+    right:35px;
+}
+
+.login a{
+    width:65px;
+    height:65px;
+    background:white;
+    color:#b87b7b;
+    text-decoration:none;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.login a:hover{
+    background:#b87b7b;
+    color:white;
+    transform:scale(1.1);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    nav{
+        padding:25px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero{
+        padding:25px;
+    }
+
+    .content h1{
+        font-size:55px;
+        line-height:55px;
+    }
+
+    .content p{
+        font-size:16px;
+    }
+
+    .menu{
+        display:flex;
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .menu a{
+        margin:0;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="overlay">
+
+    <nav>
+        <div class="logo">SECOND BLOOMÉ</div>
+
+    </nav>
+
+    <section class="hero">
+        <div class="content">
+
+            <h1>
+                SECOND<br>
+                BLOOMÉ
+            </h1>
+
+            <p>
+                Curated thrift fashion with timeless style.
+                Temukan koleksi pakaian second branded pilihan
+                dengan kualitas terbaik dan harga terjangkau.
+            </p>
+
+            <a href="login.html" class="btn">
+                SHOP NOW
+            </a>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- Login Icon -->
+<div class="login">
+    <a href="login.html">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="28"
+             height="28"
+             fill="currentColor"
+             viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 100-6 3 3 0 000 6z"/>
+          <path fill-rule="evenodd"
+          d="M8 9a5 5 0 00-5 5 .5.5 0 001 0 4 4 0 118 0 .5.5 0 001 0 5 5 0 00-5-5z"/>
+        </svg>
+    </a>
+</div>
+
+</body>
+</html>
