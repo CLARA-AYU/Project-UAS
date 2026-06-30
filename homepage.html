@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Second Bloom</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Times New Roman,sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            background:#faf7f2;
+            color:#333;
+            line-height:1.6;
+
+        }
+
+        nav{
+            position:sticky;
+            top:0;
+            padding:18px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:white;
+            box-shadow:0 2px 10px pink;
+            z-index:100;
+
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:700;
+            color:#b87b7b;
+            animation:float 3s infinite;
+
+        }
+
+        .links a{
+            text-decoration:none;
+            color:#333;
+            margin:0 14px;
+            transition:0.3s;
+
+        }
+
+        .links a:hover{
+            color:#b87b7b;
+
+        }
+
+        .hero{
+            min-height:90vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:
+            linear-gradient(
+            120deg,
+            #f9ebe7,
+            #f5f0ea
+            );
+
+        }
+
+        .hero h1{
+            font-size:clamp(2rem,6vw,3.5rem);
+            animation:fadeUp 1s;
+
+        }
+
+        .hero p{
+            margin:15px 0;
+            font-size:clamp(1rem,2vw,1.2rem);
+
+        }
+
+        .btn{
+            display:inline-block;
+            padding:10px 18px;
+            border:none;
+            background:#b87b7b;
+            color:#fff;
+            border-radius:30px;
+            text-decoration:none;
+            transition:.4s;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            transform:translateY(-5px);
+            box-shadow:0 10px 25px pink;
+            background:#8f5e5e;
+        }
+        
+        .logout{
+            text-align: center;
+            margin-top: 30px;
+        }
+    
+        section{
+            padding: 
+            clamp(40px,6vw,70px)
+            clamp(20px,8vw,8%);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:
+            repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            padding:15px;
+            border-radius:18px;
+            overflow:hidden;
+            transition:.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+            box-shadow:
+            0 12px 30px pink;
+        }
+
+        .card img{
+            width:100%;
+            height:280px;
+            object-fit:cover;
+            border-radius:12px;
+        }
+
+        .card:hover .pic{
+            transform:scale(1.05);
+        }
+
+        .card h3{
+            margin:12px 0 5px;
+        }
+
+
+
+        .about{
+            max-width:700px;
+            margin:auto;
+            text-align:center;
+        }
+
+        footer{
+            padding:40px;
+            text-align:center;
+            background:white;
+        }
+
+        @keyframes fadeUp{
+            from{
+                opacity:0;
+                transform:
+                translateY(40px);
+            }
+            to{
+                opacity:1;
+                transform:
+                translateY(0);
+            }
+        }
+
+        @keyframes float{
+            50%{
+                transform:
+                translateY(-5px);
+            }
+        }
+
+        @media(max-width:700px){
+            .hero h1{
+                font-size:3rem;
+             }
+            nav{
+                flex-direction:column;
+                gap:10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+    <div class="logo">
+    Second Bloomé
+    </div>
+
+    <div class="links">
+    <a href="#home">Home</a>
+    <a href="#clothes">Clothes</a>
+    <a href="#shoes">Shoes</a>
+    <a href="#bags">Bags</a>
+    <a href="#about">About</a>
+    
+    <button onclick="cart()">🛒</button>
+
+    </div>
+    </nav>
+
+    <section class="hero" id="home">
+    <div>
+        <h1>Second Bloomé</h1>
+        <p>
+        Preloved treasures for her second bloom.
+        </p>
+        <a href="#clothes" class="btn">Shop Now</a>
+       
+    </div>
+    </section>
+
+    <section id="clothes">
+        <h2>Thrift Clothes</h2>
+        <div class="grid">
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/36/4d/64/364d642d3fe0c347a91a8c926f8162a4.jpg" alt="Floral Dress">
+        <h3>Floral Dress</h3>
+        <p>Rp175.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/1200x/ff/ad/c3/ffadc3d745a885f0b4dfd9cf20b64046.jpg" alt="Knit Cardigan">
+        <h3>Knit Cardigan</h3>
+        <p>Rp100.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/5b/62/53/5b6253f2c7cd5a9278bcc3c6f4f08759.jpg" alt="White Blouse">
+        <h3>White Blouse</h3>
+        <p>Rp65.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/b5/6f/5e/b56f5eb52fface843f88ea15cb875a0c.jpg" alt="Polka Halter">
+        <h3>Polka Halter</h3>
+        <p>Rp85.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/8c/fa/63/8cfa63c2829593a24bcf073bb5d6944f.jpg" alt="Ruffle Top">
+        <h3>Ruffle Top</h3>
+        <p>Rp85.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/87/b6/81/87b681561d453d20661c81769ad36903.jpg" alt="Oneset Summer">
+        <h3>Oneset Summer</h3>
+        <p>Rp180.000</p>
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="shoes">
+        <h2>Shoes</h2>
+        <div class="grid">
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/07/7b/22/077b22d33f6215464537e6393eaca4a2.jpg" alt="Mary Jane">
+        <h3>Mary Jane</h3>
+        <p>Rp120.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/1200x/60/8b/85/608b85f9f7c56dfea9271df38c696405.jpg" alt="Pink Sneakers">
+        <h3>Pink Sneakers</h3>
+        <p>Rp450.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/1200x/43/2f/df/432fdf80243a4af48656a77aca8c62fc.jpg" alt="Heels">
+        <h3>Heels</h3>
+        <p>Rp135.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/f4/21/fa/f421faa00d1378dcd8c33bf62e1ce01b.jpg" alt="Flatshoes">
+        <h3>Flatshoes</h3>
+        <p>Rp335.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/ff/19/91/ff199142e0bcf8e887adda06b5759c08.jpg" alt="Heels Sandal">
+        <h3>Heels Sandal</h3>
+        <p>Rp65.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/57/e4/a0/57e4a0febbf7cc88d89313f9e2d76441.jpg" alt="Blue Sneakers">
+        <h3>Blue Sneakers</h3>
+        <p>Rp435.000</p>
+        </div>
+
+        </div>
+    </section>
+
+
+    <section id="bags">
+        <h2>Bags</h2>
+        <div class="grid">
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/23/3a/69/233a69de3e7d526e9a03982bc812e23e.jpg" alt="Tote bag">
+        <h3>Tote Bag</h3>
+        <p>Rp695.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/cf/4a/db/cf4adb99e2342b9d199b4ae7b3d4b008.jpg" alt="Shoulder Bag">
+        <h3>Shoulder Bag</h3>
+        <p>Rp415.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/5c/b0/08/5cb008cf8d4d9a5e1e5e7ad7f26b1cfe.jpg" alt="Mini Bag">
+        <h3>Mini Bag</h3>
+        <p>Rp190.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/1200x/64/f3/05/64f30586da60f5644f3c4f68cd482130.jpg" alt="Hand Bag">
+        <h3>Hand Bag</h3>
+        <p>Rp590.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/1200x/1a/67/b1/1a67b1b462c9f441ce272f2386497a1e.jpg" alt="Sling Bag">
+        <h3>Sling Bag</h3>
+        <p>Rp120.000</p>
+        </div>
+
+        <div class="card">
+        <img src="https://i.pinimg.com/736x/07/a5/f8/07a5f852030f3000371ca7888c987348.jpg" alt="Beach Bag">
+        <h3>Beach Bag</h3>
+        <p>Rp80.000</p>
+        </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+    <h2>About Us</h2>
+
+    <p class="about">
+        Second Bloomé is a curated women's thrift shop offering preloved clothes, shoes, and bags in modern styles.
+        We believe every beautiful item deserves a second bloom.
+    </p>
+
+    <div class="logout">
+        <a href="index.html" class="btn">Logout</a>
+    </div>
+    </section>
+
+    <footer>
+    Instagram @secondbloomé
+    <br>
+    © 2025 Second Bloomé
+    </footer>
+
+    <script>
+    function cart(){
+    alert("🛒 Belum ada barang di keranjang");
+    }
+    </script>
+
+    <script src="script.js">
+    const button = document.querySelector(".btn");
+    button.addEventListener("click",()=>{
+    document.querySelector("#clothes")
+    .scrollIntoView({
+    behavior:"smooth"
+    });
+    });
+    </script>
+
+</body>
+</html>
